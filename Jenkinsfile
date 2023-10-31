@@ -13,9 +13,8 @@ pipeline{
             }
 
         }
-    }
-        stages{
-        stage("Check out from SCM"){
+
+        stage("Checkout from SCM"){
             steps {
                 git branch: 'main', credentialsId: 'git-hub', url: 'https://github.com/ibanoba/complete-prodn-e2e-pipeline'
             }
